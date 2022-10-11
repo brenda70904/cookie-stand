@@ -23,9 +23,9 @@ let seattle = {
 };
 seattle.generateCookieSale();
 
-for(let i = 0; i < hours.length; i ++){
+for (let i = 0; i < hours.length; i++) {
   let li = document.createElement('li');
-  li.textContent = seattle.cookieSoldperHrs[i] ;
+  li.textContent = seattle.cookieSoldperHrs[i];
   seattleList.appendChild(li);
 }
 
@@ -39,8 +39,8 @@ let tokyo = {
   randomCust: function () {
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
   },
-  generateCookieSale: function (){
-    for(let i = 0; i <hours.length; i++){
+  generateCookieSale: function () {
+    for (let i = 0; i < hours.length; i++) {
       let cookiesThisHr = Math.ceil(this.randomCust() * this.avgSale);
       this.cookieSoldperHrs.push(cookiesThisHr);
       console.log(cookiesThisHr);
@@ -48,48 +48,84 @@ let tokyo = {
   }
 };
 tokyo.generateCookieSale();
-for(let i = 0; i < hours.length; i ++){
+for (let i = 0; i < hours.length; i++) {
   let li = document.createElement('li');
-  li.textContent = tokyo.cookieSoldperHrs[i] ;
+  li.textContent = tokyo.cookieSoldperHrs[i];
   tokyoList.appendChild(li);
 }
 
+let dubaiList = document.getElementById('dubaiList');
+let dubai = {
+  minCust: 11,
+  maxCust: 38,
+  avgSale: 3.7,
+  dailyTotal: 0,
+  cookieSoldperHrs: [],
+  randomCust: function () {
+    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+  },
+  generateCookieSale: function () {
+    for (let i = 0; i < hours.length; i++) {
+      let cookiesThisHr = Math.ceil(this.randomCust() * this.avgSale);
+      this.cookieSoldperHrs.push(cookiesThisHr);
+      console.log(cookiesThisHr);
+    }
+  }
+};
+dubai.generateCookieSale();
 
+for (let i = 0; i < hours.length; i++) {
+  let li = document.createElement('li');
+  li.textContent = dubai.cookieSoldperHrs[i];
+  dubaiList.appendChild(li);
+}
 
+let parisList = document.getElementById('parisList');
+let paris = {
+  minCust: 3,
+  maxCust: 24,
+  avgSale: 1.2,
+  dailyTotal: 0,
+  cookieSoldperHrs: [],
+  randomCust: function () {
+    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+  },
+  generateCookieSale: function () {
+    for (let i = 0; i < hours.length; i++) {
+      let cookiesThisHr = Math.ceil(this.randomCust() * this.avgSale);
+      this.cookieSoldperHrs.push(cookiesThisHr);
+      console.log(cookiesThisHr);
+    }
+  }
+};
+paris.generateCookieSale();
 
-
-// let dubai = {
-//   minCust: 3,
-//   maxCust: 24,
-//   avgSale: 1.2,
-//   dailyTotal: 0,
-//   cookieSoldperHrs: [],
-//   randomCust: function () {
-//     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
-//   }
-// };
-// console.log(dubai.randomCust());
-
-// let paris = {
-//   minCust: 3,
-//   maxCust: 24,
-//   avgSale: 1.2,
-//   dailyTotal: 0,
-//   cookieSoldperHrs: [],
-//   randomCust: function () {
-//     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
-//   }
-// };
-// console.log(paris.randomCust());
-
-// let lima = {
-//   minCust: 3,
-//   maxCust: 24,
-//   avgSale: 1.2,
-//   dailyTotal: 0,
-//   cookieSoldperHrs: [],
-//   randomCust: function () {
-//     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
-//   }
-// };
-// console.log(lima.randomCust());
+for (let i = 0; i < hours.length; i++) {
+  let li = document.createElement('li');
+  li.textContent = paris.cookieSoldperHrs[i];
+  parisList.appendChild(li);
+}
+let limaList = document.getElementById('limaList');
+let lima = {
+  minCust: 3,
+  maxCust: 24,
+  avgSale: 1.2,
+  dailyTotal: 0,
+  cookieSoldperHrs: [],
+  randomCust: function () {
+    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+  },
+  generateCookieSale: function () {
+    for (let i = 0; i < hours.length; i++) {
+      let cookiesThisHr = Math.ceil(this.randomCust() * this.avgSale);
+      this.cookieSoldperHrs.push(cookiesThisHr);
+      console.log(cookiesThisHr);
+    }
+  }
+};
+lima.generateCookieSale();
+for (let i = 0; i < hours.length; i++) {
+  let li = document.createElement('li');
+  li.textContent = lima.cookieSoldperHrs[i];
+  limaList.appendChild(li);
+}
