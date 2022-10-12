@@ -1,3 +1,21 @@
 ul{
   list-style-type: disc;
 }
+table, td, th {
+  border: 1px solid rgb(234, 109, 95);
+}
+
+table{
+  margin: 1rem;
+  padding: 1rem;
+}
+td, th{
+  padding:10px;
+}
+thead th{
+  font-weight: bold;
+}
+
+tfoot{
+  background-color: beige;
+}
