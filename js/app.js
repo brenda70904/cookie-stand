@@ -7,7 +7,7 @@ let hours = ['06am', '07am', '08am', '09am', '10am', '11am', '12pm', '01pm', '02
 let randomCust = function (cookiestands) {
   return Math.floor(Math.random() * (cookiestands.maxCust - cookiestands.minCust + 1) + cookiestands.minCust);
 };
-//
+//set up table
 let table = document.querySelector('table');
 //this function create table head
 function header() {
@@ -26,7 +26,6 @@ function header() {
   totalheader.textContent = 'Total';
   headerRow.appendChild(totalheader);
 }
-header();
 
 function CookiesStands(location, minCust, maxCust, avgSale) {
   this.location = location;
@@ -47,24 +46,16 @@ CookiesStands.prototype.generateCookieSale = function () {
   }
 };
 
-//add up all cookie sale per hour , add to li tag with total
+//add up all cookie sale per hour , add to td tag with total
 CookiesStands.prototype.cookiesSaleTotalSea = function () {
   this.generateCookieSale();
-  // create element tbody
   let tablebody = document.createElement('tbody');
-  // append to table
   table.appendChild(tablebody);
-  //create element tr
   let tablerow = document.createElement('tr');
-  //append to tbody
   tablebody.appendChild(tablerow);
-  // create table data
   let tabledata = document.createElement('td');
-  // tell webpage where to find the txtcontent.
   tabledata.textContent = this.location;
-  // append the table data/content to table row.
   tablerow.appendChild(tabledata);
-  //loop for create td , add data into table
   for (let i = 0; i < hours.length; i++) {
     let td = document.createElement('td');
     td.textContent = this.cookieSoldperHrs[i];
@@ -75,51 +66,40 @@ CookiesStands.prototype.cookiesSaleTotalSea = function () {
   total1.textContent = this.dailyTotal;
   tablerow.appendChild(total1);
 };
-
+header();
 seattle.cookiesSaleTotalSea();
 
-
-
-// Seattle
-// let seattleList = document.getElementById('seattleList');
-// let seattle = {
-//   location: 'Seattle',
-//   minCust: 23,
-//   maxCust: 65,
-//   avgSale: 6.3,
-//   dailyTotal: 0,
-//   cookieSoldperHrs: [],
-//   randomCust: function () {
-//     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
-//   },
-//   // for cookie sale each hour
-//   generateCookieSale: function () {
-//     for (let i = 0; i < hours.length; i++) {
-//       let cookiesThisHr = Math.ceil(this.randomCust() * this.avgSale);
-//       this.cookieSoldperHrs.push(cookiesThisHr);
-//       console.log(cookiesThisHr);
-//     }
-//   },
-//   // for create li tag and put everthing together
-//   randomCookieSaleperHr: function () {
-//     this.generateCookieSale();
-//     for (let i = 0; i < hours.length; i++) {
-//       let li = document.createElement('li');
-//       li.textContent = ` ${hours[i]} : ${this.cookieSoldperHrs[i]} cookies`;
-//       seattleList.appendChild(li);
-//       this.dailyTotal += this.cookieSoldperHrs[i];
-//     }
-//     let total1 = document.createElement('li');
-//     total1.textContent = `Total : ${this.dailyTotal} cookies`;
-//     seattleList.appendChild(total1);
-//   }
-// };
-
-// seattle.randomCookieSaleperHr();
-
-
-
 // //Tokyo
+
+let tokyo = new CookiesStands('Tokyo', 3, 24, 1.2);
+CookiesStands.prototype.generateCookieSale = function () {
+  for (let i = 0; i < hours.length; i++) {
+    let cookiesThisHr = Math.ceil(randomCust(this) * this.avgSale);
+    this.cookieSoldperHrs.push(cookiesThisHr);
+    console.log(cookiesThisHr);
+  }
+};
+CookiesStands.prototype.cookiesSaleTotalTok = function () {
+  this.generateCookieSale();
+  let tablebody = document.createElement('tbody');
+  table.appendChild(tablebody);
+  let tablerow = document.createElement('tr');
+  tablebody.appendChild(tablerow);
+  let tabledata = document.createElement('td');
+  tabledata.textContent = this.location;
+  tablerow.appendChild(tabledata);
+  for (let i = 0; i < hours.length; i++) {
+    let td = document.createElement('td');
+    td.textContent = this.cookieSoldperHrs[i];
+    tablerow.appendChild(td);
+    this.dailyTotal += this.cookieSoldperHrs[i];
+  }
+  let total2 = document.createElement('td');
+  total2.textContent = this.dailyTotal;
+  tablerow.appendChild(total2);
+};
+tokyo.cookiesSaleTotalTok();
+
 // let tokyoList = document.getElementById('tokyoList');
 // let tokyo = {
 //   minCust: 3,
@@ -138,8 +118,9 @@ seattle.cookiesSaleTotalSea();
 //     }
 //   }
 // };
-// tokyo.generateCookieSale();
+
 // for (let i = 0; i < hours.length; i++) {
+//   tokyo.generateCookieSale();
 //   let li = document.createElement('li');
 //   li.textContent = ` ${hours[i]} : ${tokyo.cookieSoldperHrs[i]} cookies`;
 //   tokyoList.appendChild(li);
