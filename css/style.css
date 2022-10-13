@@ -1,21 +1,57 @@
-ul{
-  list-style-type: disc;
+
+header{
+  background-color: darkgray;
 }
-table, td, th {
-  border: 1px solid rgb(234, 109, 95);
+header nav{
+width: 960px;
+margin: auto;
+display: flex;
 }
 
-table{
-  margin: 1rem;
-  padding: 1rem;
-}
-td, th{
-  padding:10px;
-}
-thead th{
-  font-weight: bold;
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
 }
 
-tfoot{
-  background-color: beige;
+#logo{
+ margin-top:5px;
+ margin-bottom: 5px;
+}
+
+main{
+  background-color: gray;
+  width: 960px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+main img{
+  margin-bottom: 30px;
+}
+
+main article{
+  width: 450px;  
+}
+main article section{
+  overflow: auto;
+  height: 320px;
+}
+section{
+  padding-bottom: 5px;
+}
+button{
+  margin:5px;
+  padding: 5px 5px;
+  color:white;
+  background-color: black;
+  height: 30px;
+ 
+}
+footer{
+  background-color: rgb(187, 178, 178);
+  height: 50px;
 }
