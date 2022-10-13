@@ -1,11 +1,15 @@
-
-header{
-  background-color: darkgray;
+body {
+  background-color: rgb(248, 161, 151);
 }
-header nav{
-width: 960px;
-margin: auto;
-display: flex;
+
+header {
+  background-color: salmon
+}
+
+header nav {
+  width: 960px;
+  margin: auto;
+  display: flex;
 }
 
 header nav ul {
@@ -15,13 +19,13 @@ header nav ul {
   align-items: center;
 }
 
-#logo{
- margin-top:5px;
- margin-bottom: 5px;
+#logo {
+  width: 200px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-main{
-  background-color: gray;
+main {
   width: 960px;
   margin: 30px auto 0;
   display: flex;
@@ -29,29 +33,53 @@ main{
   justify-content: space-between;
   align-items: flex-start;
 }
-main img{
+
+main img {
   margin-bottom: 30px;
 }
 
-main article{
-  width: 450px;  
+.product {
+  width: 300px;
+  height: 375px;
 }
-main article section{
+
+/* main article {
+  width: 450px;
+} */
+
+/* main article section {
   overflow: auto;
   height: 320px;
-}
-section{
+} */
+
+/* section {
   padding-bottom: 5px;
+} */
+
+#salmon {
+  width: 480px;
+  height: 400px;
 }
-button{
-  margin:5px;
+
+/* button {
+  margin: 5px;
   padding: 5px 5px;
-  color:white;
+  color: white;
   background-color: black;
   height: 30px;
- 
+
+} */
+#lastsection{
+  display: flex;
 }
-footer{
-  background-color: rgb(187, 178, 178);
+#paragraph {
+padding-left: 20px;
+padding-right: 20px;
+height: 40px ;
+
+}
+
+footer {
+  background-color: rgb(205, 118, 109);
   height: 50px;
 }
