@@ -3,7 +3,7 @@ body {
 }
 
 header {
-  background-color: salmon;
+  background-color: #ac4e3c;
   font-weight: bold;
   font-family: 'Open Sans', sans-serif;
 
@@ -97,6 +97,6 @@ button {
 }
 
 footer {
-  background-color: rgb(205, 118, 109);
+  background-color: #ac4e3c;
   height: 50px;
 }
