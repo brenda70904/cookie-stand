@@ -100,14 +100,14 @@ function footer() {
     footerRow.appendChild(td);
   }
   let td = document.createElement('td');
-  
-  td.textContent = seattle.dailyTotal+tokyo.dailyTotal+dubai.dailyTotal+paris.dailyTotal+lima.dailyTotal;
+  let allCitiesSale = 0;
+  for (let i = 0; i < cities.length; i++) {
+    allCitiesSale += cities[i].dailyTotal;
+  }
+  td.textContent = allCitiesSale;
   footerRow.appendChild(td);
 }
 footer();
-
-
-
-//1st for loop : 把個城市的sale家再一起 cookieSold ++
-//2nd forloop : 找出每個城市each hour[i]的sale
+//loop i = for hour index.
+//loop j = for cities,loop citiies array, target cities's sale in first hour.
 //vgSale * randomCust(cookiestands);
