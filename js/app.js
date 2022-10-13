@@ -100,6 +100,7 @@ function footer() {
     footerRow.appendChild(td);
   }
   let td = document.createElement('td');
+  
   td.textContent = seattle.dailyTotal+tokyo.dailyTotal+dubai.dailyTotal+paris.dailyTotal+lima.dailyTotal;
   footerRow.appendChild(td);
 }
