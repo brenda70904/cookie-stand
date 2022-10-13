@@ -10,7 +10,7 @@ header {
 }
 
 header nav {
-  width: 960px;
+  width: 100%;
   margin: auto;
   display: flex;
 }
@@ -33,13 +33,11 @@ header nav ul {
   color: white; 
 }
 
-
-
 ul{
   list-style-type: disc;
 }
 table, td, th {
-  border: 1px solid rgb(234, 109, 95);
+  border: 1px solid #470b00;
 }
 
 table{
@@ -53,9 +51,6 @@ thead th{
   font-weight: bold;
 }
 
-tfoot{
-  background-color: beige;
-}
 
 /* Form styling */
 /* form {
@@ -65,7 +60,7 @@ tfoot{
 fieldset {
   display: flex;
   align-content: space-between;
-  border: 2px solid ;
+  border: 1px solid ;
   border-color: #470b00;
   width:100%;
   padding: 1rem;

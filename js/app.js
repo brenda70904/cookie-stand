@@ -85,7 +85,9 @@ function footer() {
   table.appendChild(footerRow);
   footerRow.appendChild(tablefooter);
 
-
+  //loop i = for hour index.
+  //loop j = for cities,loop citiies array, target cities's sale in first hour.
+  //vgSale * randomCust(cookiestands);
   let hourTotalList = [];
   for (let i = 0; i < hours.length; i++) {
     let sum = 0;
@@ -108,6 +110,27 @@ function footer() {
   footerRow.appendChild(td);
 }
 footer();
-//loop i = for hour index.
-//loop j = for cities,loop citiies array, target cities's sale in first hour.
-//vgSale * randomCust(cookiestands);
+
+
+// form
+let form = document.querySelector('form');
+// function for adding info to table
+function handleSubmit(event) {
+  event.preventDefault();
+  console.log(event);
+  let location = event.target.location.value;
+  console.log(`this is ${event.target.location.value}`);
+  let minCust = event.target.minCust.value;
+  console.log(`this is min: ${event.target.minCust.value}`);
+  let maxCust = event.target.maxCust.value;
+  console.log(`this is ${event.target.maxCust.value}`);
+  let avgSale = event.target.avgSale.value;
+  console.log(`this is ${event.target.avgSale.value}`);
+
+  let newLocation = new CookiesStands(location, minCust, maxCust, avgSale);
+
+  console.log(newLocation);
+  newLocation.cookiesSaleTotal();
+
+}
+form.addEventListener('submit', handleSubmit);
