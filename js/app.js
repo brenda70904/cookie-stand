@@ -131,6 +131,9 @@ function handleSubmit(event) {
 
   console.log(newLocation);
   newLocation.cookiesSaleTotal();
+  document.querySelector('table').deleteRow((cities.length)+1);
+  cities.push(newLocation);
+  footer();
 
 }
 form.addEventListener('submit', handleSubmit);
