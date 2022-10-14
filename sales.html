@@ -4,18 +4,53 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> sales page </title>
+  <title> Sales page </title>
   <link rel="stylesheet" href="css/rest.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/sale.css">
 </head>
 
 <body>
+  <header>
+    <nav><img id="logo" src="./image/salmon.png" alt="salmonLogo">
+      <ul>
+        <li><a class="navlink" href="./index.html">Home</a></li>
+        <li><a class="navlink" href="./contact.html">Contact us</a></li>
+      </ul>
+    </nav>
+  </header>
+  </header>
   <div>
-    <table >
+    <table>
       <thead>
       </thead>
       <tbody>
+        <form action="">
 
+          <fieldset>
+            <legend>Add location:</legend>
+
+            <label for="StoreLocation"> Store Location
+              <input id="storeLocation" type="text" name="location">
+            </label>
+
+            <label for="minCust"> Min custormers/hour:
+              <input id="minCust" type="text" name="minCust">
+            </label>
+
+            <label for="maxCust"> Max custormers/hour:
+              <input id="maxCust" type="text" name="maxCust">
+            </label>
+
+            <label for="avgSale"> Average cookies sale/hour:
+              <input id="avgSale" type="text" name="avgSale">
+            </label>
+            <button>Submit</button>
+          </fieldset>
+
+        </form>
       </tbody>
       <tfoot>
       </tfoot>

@@ -85,7 +85,9 @@ function footer() {
   table.appendChild(footerRow);
   footerRow.appendChild(tablefooter);
 
-
+  //loop i = for hour index.
+  //loop j = for cities,loop citiies array, target cities's sale in first hour.
+  //vgSale * randomCust(cookiestands);
   let hourTotalList = [];
   for (let i = 0; i < hours.length; i++) {
     let sum = 0;
@@ -100,13 +102,38 @@ function footer() {
     footerRow.appendChild(td);
   }
   let td = document.createElement('td');
-  td.textContent = seattle.dailyTotal+tokyo.dailyTotal+dubai.dailyTotal+paris.dailyTotal+lima.dailyTotal;
+  let allCitiesSale = 0;
+  for (let i = 0; i < cities.length; i++) {
+    allCitiesSale += cities[i].dailyTotal;
+  }
+  td.textContent = allCitiesSale;
   footerRow.appendChild(td);
 }
 footer();
 
 
+// form
+let form = document.querySelector('form');
+// function for adding info to table
+function handleSubmit(event) {
+  event.preventDefault();
+  console.log(event);
+  let location = event.target.location.value;
+  console.log(`this is ${event.target.location.value}`);
+  let minCust = event.target.minCust.value;
+  console.log(`this is min: ${event.target.minCust.value}`);
+  let maxCust = event.target.maxCust.value;
+  console.log(`this is ${event.target.maxCust.value}`);
+  let avgSale = event.target.avgSale.value;
+  console.log(`this is ${event.target.avgSale.value}`);
 
-//1st for loop : 把個城市的sale家再一起 cookieSold ++
-//2nd forloop : 找出每個城市each hour[i]的sale
-//vgSale * randomCust(cookiestands);
+  let newLocation = new CookiesStands(location, minCust, maxCust, avgSale);
+
+  console.log(newLocation);
+  newLocation.cookiesSaleTotal();
+  document.querySelector('table').deleteRow((cities.length)+1);
+  cities.push(newLocation);
+  footer();
+
+}
+form.addEventListener('submit', handleSubmit);

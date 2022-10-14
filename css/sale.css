@@ -1,8 +1,43 @@
+body {
+  background-color: rgb(248, 161, 151);
+}
+
+header {
+  background-color: #ac4e3c;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+header nav {
+  width: 100%;
+  margin: auto;
+  display: flex;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}
+
+#logo {
+  width: 200px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.navlink{
+  font-size: 25px;
+  color: white; 
+}
+
 ul{
   list-style-type: disc;
 }
 table, td, th {
-  border: 1px solid rgb(234, 109, 95);
+  border: 1px solid #470b00;
 }
 
 table{
@@ -16,6 +51,18 @@ thead th{
   font-weight: bold;
 }
 
-tfoot{
-  background-color: beige;
+
+/* Form styling */
+/* form {
+  width: 50%;
+  margin-top: 2rem;
+} */
+fieldset {
+  display: flex;
+  align-content: space-between;
+  border: 1px solid ;
+  border-color: #470b00;
+  width:100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
