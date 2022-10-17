@@ -6,7 +6,7 @@ header {
   background-color: #ac4e3c;
   font-weight: bold;
   font-family:'Fuzzy Bubbles', cursive;
-  
+
 
 }
 
@@ -30,7 +30,7 @@ header nav ul {
 }
 
 .navlink {
-  font-size: 25px;
+  font-size: 50px;
   color: white;
 }
 
