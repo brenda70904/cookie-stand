@@ -5,7 +5,8 @@ body {
 header {
   background-color: #ac4e3c;
   font-weight: bold;
-  font-family: 'Open Sans', sans-serif;
+  font-family:'Fuzzy Bubbles', cursive;
+
 
 }
 
@@ -29,7 +30,7 @@ header nav ul {
 }
 
 .navlink {
-  font-size: 25px;
+  font-size: 50px;
   color: white;
 }
 
@@ -59,17 +60,21 @@ main img {
 
 main article {
   width: 450px;
-  font-family: 'Open Sans', sans-serif;
-
-  /* display: flex;
-  flex-direction: column; */
+  
+}
+h3{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight:bold;
+  color: red;
 }
 
 main article section {
   overflow: auto;
   height: 320px;
   font-size: 20px;
-  font-family: 'Open Sans', sans-serif;
+  font-family:'Times New Roman', Times, serif;
+  color: purple;
 
 }
 
@@ -88,16 +93,7 @@ button {
   color: white;
   background-color: black;
   height: 30px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-#address {
-  font-size: 20px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-#toyfish {
-  margin-right: 10px;
+  font-family: 'Fuzzy Bubbles', cursive;
 }
 
 footer {
@@ -105,4 +101,11 @@ footer {
   justify-content: center;
   background-color: #ac4e3c;
   height: 50px;
+ padding: 10px; 
+}
+
+#address{
+  padding: 10px;
+  font-size: 20px;
+  font-family: 'Fuzzy Bubbles', cursive;
 }

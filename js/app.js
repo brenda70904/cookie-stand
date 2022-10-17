@@ -137,3 +137,11 @@ function handleSubmit(event) {
 
 }
 form.addEventListener('submit', handleSubmit);
+
+
+// clean up code 
+// function elementMaker(newElement, content, parent){
+//   let element = document.createElement(newElement);
+//   element.textContent = content;
+//   parent.appendChild(element);
+// };
